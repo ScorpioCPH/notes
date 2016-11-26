@@ -26,7 +26,7 @@
         accesskeyid: XXXXX
         accesskeysecret: XXXXX
         region: oss-cn-hangzhou
-        endpoint: cargo-registry.oss-internal.aliyuncs.com
+        endpoint: cargo-registry.oss-cn-hangzhou.aliyuncs.com
         internal: true
         bucket: cargo-registry
         rootdirectory: /
