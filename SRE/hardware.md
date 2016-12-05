@@ -1,6 +1,14 @@
 ## Hardware
 
+##### ECC memory
+
+[WiKi](https://en.wikipedia.org/wiki/ECC_memory)
+
+`Error-correcting code memory` (ECC memory) is a type of computer data storage that can detect and correct the most common kinds of internal data corruption. ECC memory is used in most computers where data corruption cannot be tolerated under any circumstances, such as for scientific or financial computing.
+
 ##### How to Check ECC RAM Functionality
+
+**dmidecode**
 
 ```
 $ sudo dmidecode --type memory
@@ -46,6 +54,8 @@ Memory Device
 
 `Error Correction Type: Single-bit ECC` is what we are looking for.
 `Total Width: 128 bits` and `Data Width: 64 bits` are also useful informations.
+
+**inxi**
 
 ```
 $ inxi -m -xxx
