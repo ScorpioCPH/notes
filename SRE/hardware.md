@@ -68,3 +68,34 @@ Memory:    Array-1 capacity: 64 GB devices: 4 EC: Single-bit ECC
 ```
 
 Here ECC-RAM modules are used `EC: Single-bit ECC`.
+
+
+##### Network Card
+
+- `lspci`: list all PCI devices.
+- `lshw`: list all hardware.
+
+```
+$ lspci | grep -i "ethernet"
+03:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 0c)
+```
+
+```
+$ sudo lshw -C network
+  *-network               
+       description: Ethernet interface
+       product: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+       vendor: Realtek Semiconductor Co., Ltd.
+       physical id: 0
+       bus info: pci@0000:03:00.0
+       logical name: enp3s0
+       version: 0c
+       serial: 40:8d:5c:6b:e8:2d
+       size: 1Gbit/s
+       capacity: 1Gbit/s
+       width: 64 bits
+       clock: 33MHz
+       capabilities: pm msi pciexpress msix vpd bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+       configuration: autonegotiation=on broadcast=yes driver=r8169 driverversion=2.3LK-NAPI duplex=full firmware=rtl8168g-2_0.0.1 02/06/13 ip=192.168.1.11 latency=0 link=yes multicast=yes port=MII speed=1Gbit/s
+       resources: irq:29 ioport:d000(size=256) memory:f7800000-f7800fff memory:f2100000-f2103fff
+```
