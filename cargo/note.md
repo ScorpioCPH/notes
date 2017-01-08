@@ -20,9 +20,9 @@
 
 	```
 	storage:
-    cache:
+      cache:
         layerinfo: inmemory
-    oss:
+      oss:
         accesskeyid: XXXXX
         accesskeysecret: XXXXX
         region: oss-cn-hangzhou
@@ -30,13 +30,13 @@
         internal: true
         bucket: cargo-registry
         rootdirectory: /
-    # filesystem:
-    #    rootdirectory: /storage
-    maintenance:
-        uploadpurging:
-            enabled: false
-    delete:
-        enabled: true
+        # filesystem:
+        #     rootdirectory: /storage
+        maintenance:
+            uploadpurging:
+                enabled: false
+        delete:
+            enabled: true
     ```
 
 5. edit `docker-compose.yml` to open debug options if needed.
