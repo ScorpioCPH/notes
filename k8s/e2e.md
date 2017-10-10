@@ -24,3 +24,10 @@ $ export KUBE_MASTER_IP="127.0.0.1:6443"
 $ export KUBE_MASTER=local
 $ go run hack/e2e.go -- --provider=local -v --test --test_args="--ginkgo.focus=\[Feature:GPUDevicePlugin\]"
 ```
+
+
+### build e2e test only (linux platform)
+
+```shell
+$ make all WHAT=test/e2e/e2e.test KUBE_BUILD_PLATFORMS=linux/amd64
+```
