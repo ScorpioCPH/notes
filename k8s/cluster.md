@@ -13,3 +13,10 @@ maybe inotify resources exhausted: possible leak in cAdvisor
 ```shell
 $ sudo echo 1048576 > /proc/sys/fs/inotify/max_user_watches
 ```
+
+If you like to make your limit permanent, use:
+
+```shell
+$ echo fs.inotify.max_user_watches=1048576 | sudo tee -a /etc/sysctl.conf
+$ sudo sysctl -p
+```
