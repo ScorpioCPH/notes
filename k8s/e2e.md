@@ -8,6 +8,12 @@ Testing against local clusters
 $ hack/local-up-cluster.sh
 ```
 
+If you want enable `DevicePlugin` (with log level = 2):
+
+```shell
+$ FEATURE_GATES=DevicePlugins=true LOG_LEVEL=2 hack/local-up-cluster.sh
+```
+
 **build e2e test**
 
 ```shell
