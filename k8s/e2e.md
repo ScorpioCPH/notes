@@ -43,7 +43,7 @@ $ make all WHAT=test/e2e/e2e.test KUBE_BUILD_PLATFORMS=linux/amd64
 ### device plugin for e2e test
 
 ```shell
-$ make test-e2e-node FOCUS="Feature:DevicePlugin" PARALLELISM=1 TEST_ARGS='--feature-gates=DynamicKubeletConfig=true --fail-swap-on=false'
+$ make test-e2e-node FOCUS="\[Feature:DevicePlugin\]" PARALLELISM=1 TEST_ARGS='--ginkgo.skip= --feature-gates=DynamicKubeletConfig=true'
 ```
 
 ```shell
