@@ -11,6 +11,8 @@ $ hack/local-up-cluster.sh
 If you want enable `DevicePlugin` (with log level = 2):
 
 ```shell
+$ export KUBERNETES_PROVIDER=local
+$ export API_HOST=`ifconfig docker0 | grep "inet addr" | awk -F'[: ]+' '{ print $4 }'`
 $ FEATURE_GATES=DevicePlugins=true ALLOW_PRIVILEGED=true LOG_LEVEL=2 hack/local-up-cluster.sh
 ```
 
