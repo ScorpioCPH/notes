@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sleep-and-random-exit
+  labels:
+    app: sleep-and-random-exit
+spec:
+  restartPolicy: Never
+  containers:
+  - name: sleep-and-random-exit
+    image: sleep-and-random-exit:1.0
